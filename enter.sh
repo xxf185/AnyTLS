@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# https://github.com/GeorgianaBlake/AnyTLS
+# https://github.com/xxf185/AnyTLS
 # AnyTLS一键管理脚本：安装/更新/查看/更改端口/更改密码/删除
 # 适配 Debian/Ubuntu (apt) 与 CentOS/RHEL/Alma/Rocky
 # 兼容 arm64 和 amd64 两种系统架构
@@ -16,7 +16,7 @@ ANYTLS_CLIENT_FILE="${CONFIG_DIR}/anytls.txt" # 主配置文件导出
 TZ_DEFAULT="Asia/Shanghai" # 默认时区
 SHELL_VERSION="0.1.0" # 版本
 ANYTLS_VERSION="0.0.8" # AnyTLS版本
-AT_ALIASES="AT_GeorgianaBlake" # AnyTLS别名
+AT_ALIASES="AnyTLS" # AnyTLS别名
 
 # 字体颜色配置
 Font="\033[0m"
@@ -651,7 +651,7 @@ main() {
     clear
     hr
     echo -e " AnyTLS 一键脚本"
-    echo -e " https://github.com/GeorgianaBlake/AnyTLS"
+    echo -e " https://github.com/xxf185/AnyTLS"
     echo -e " 当前脚本版本: ${Magenta}${SHELL_VERSION}${Font}"
     echo -e " 安装状态：$(install_status_text)"
     echo_version
