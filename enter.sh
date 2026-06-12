@@ -268,7 +268,7 @@ get_ip() {
 # 获取版本
 get_latest_version() {
   local version
-  version=$(curl -s https://api.github.com/repos/anytls/anytls-go/releases/latest \
+  version=$(curl -s https://api.github.com/repos/xxf185/anytls-go/releases/latest \
     | grep '"tag_name":' \
     | sed -E 's/.*"([^"]+)".*/\1/')
 
@@ -300,7 +300,7 @@ write_systemd() {
   cat > "$ANYTLS_SERVICE_FILE" << EOF
 [Unit]
 Description=AnyTLS Server Service
-Documentation=https://github.com/anytls/anytls-go
+Documentation=https://github.com/xxf185/anytls-go
 After=network.target network-online.target
 Wants=network-online.target
 X-AT-Version=${version}
@@ -427,7 +427,7 @@ install_anytls() {
   sleep 1
   print_info "正在下载AnyTLS..."
 
-  AT_URL="https://github.com/anytls/anytls-go/releases/download/${LATEST}/anytls_${LATEST#v}_linux_${ARCH}.zip"
+  AT_URL="https://github.com/xxf185/anytls-go/releases/download/${LATEST}/anytls_${LATEST#v}_linux_${ARCH}.zip"
 
   print_info "AnyTLS最新版本 ${LATEST}"
 
@@ -502,7 +502,7 @@ update_anytls() {
   sleep 1
   print_info "正在下载AnyTLS..."
 
-  AT_URL="https://github.com/anytls/anytls-go/releases/download/${LATEST}/anytls_${LATEST#v}_linux_${ARCH}.zip"
+  AT_URL="https://github.com/xxf185/anytls-go/releases/download/${LATEST}/anytls_${LATEST#v}_linux_${ARCH}.zip"
 
   print_info "AnyTLS最新版本 ${LATEST}"
 
