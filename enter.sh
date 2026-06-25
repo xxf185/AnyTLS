@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 # https://github.com/xxf185/AnyTLS
 # AnyTLS一键管理脚本：安装/更新/查看/更改端口/更改密码/删除
 # 适配 Debian/Ubuntu (apt) 与 CentOS/RHEL/Alma/Rocky
 # 兼容 arm64 和 amd64 两种系统架构
 
-set -euo pipefail
 
 CONFIG_DIR="/etc/AnyTLS" # 配置目录
 ANYTLS_SNAP_DIR="/tmp/anytls_install_$$" # 临时目录
