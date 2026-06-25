@@ -172,7 +172,7 @@ install_anytls() {
     mkdir -p $WORK_DIR
     echo -e "${YELLOW}▶ 正在从 GitHub 下载最新版本...${NC}"
     
-    LATEST_JSON=$(curl -s "https://api.github.com/repos/anytls/anytls-go/releases/latest")
+    LATEST_JSON=$(curl -s "https://api.github.com/repos/xxf185/anytls-go/releases/latest")
     DOWNLOAD_URL=$(echo "$LATEST_JSON" | jq -r ".assets[] | select(.name | contains(\"linux_${AT_ARCH}\") and endswith(\".zip\")) | .browser_download_url")
 
     curl -L -o "${WORK_DIR}/anytls.zip" "$DOWNLOAD_URL"
